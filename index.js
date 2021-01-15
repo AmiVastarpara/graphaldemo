@@ -7,10 +7,11 @@
 //     console.log('Example app listening on port 3000!');
 // });
 const {app} = require('./config/express');
-const debug = require('debug')('permit-app-api:index');
+const config = require('./config/config');
+const debug = require('debug')('graphqltestdemo:index');
 Promise = require('bluebird'); // eslint-disable-line no-global-assign
 
 // listen on port config.port
-app.listen('4000', () => {
-    console.log(`The application has started on port 4000`); // eslint-disable-line no-console
+app.listen(config.PORT, () => {
+    console.log(`The application has started on port using ${config.PORT}`); // eslint-disable-line no-console
 });

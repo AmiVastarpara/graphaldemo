@@ -11,3 +11,5 @@ const base_url = `/graphql-api`;
 app.use(`${base_url}`,routes);
 
 module.exports = {app};
+
+// export default app;

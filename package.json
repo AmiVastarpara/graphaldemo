@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp serve"
+    "start": "nodemon index.js",
+    "start:debug": "cross-env DEBUG=graphqltestdemo:* yarn start",
+    "build": "gulp",
+    "babel": "gulp babel"
   },
   "keywords": [],
   "author": "",
@@ -40,8 +43,10 @@
     "validate-commit-msg": "^2.6.1"
   },
   "dependencies": {
+    "apollo-server-express": "^2.19.2",
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "debug": "^4.3.1",
     "del": "^6.0.0",
     "dotenv": "^8.2.0",
@@ -49,6 +54,7 @@
     "gulp": "4.0.2",
     "gulp-load-plugins": "^2.0.1",
     "joi": "^17.3.0",
+    "mongoose": "^5.11.12",
     "path": "^0.12.7"
   }
 }

@@ -3,6 +3,9 @@ logs
 *.log
 npm-debug.log*
 
+# package.lock
+package-lock.json
+
 # Runtime data
 pids
 *.pid

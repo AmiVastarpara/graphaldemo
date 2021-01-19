@@ -54,7 +54,8 @@
     "gulp": "4.0.2",
     "gulp-load-plugins": "^2.0.1",
     "joi": "^17.3.0",
-    "mongoose": "^5.11.12",
+    "mongoose": "^5.11.9",
+    "npm-check-updates": "^10.2.5",
     "path": "^0.12.7"
   }
 }

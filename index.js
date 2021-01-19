@@ -10,17 +10,13 @@ const {app} = require('./config/express');
 const config = require('./config/config');
 const debug = require('debug')('graphqltestdemo:index');
 const mongoose = require('mongoose');
+const Tests = require('./server/models/test.model');
 const {typeDefs, resolvers } = require('./server/schema/schema');
-const bodyParser = require('body-parser');
-const cors = require('cors');
 const { ApolloServer } = require('apollo-server-express');
-
-
-Promise = require('bluebird'); // eslint-disable-line no-global-assign
 const url = "mongodb://localhost:27017/testapollodb";
+const cors = require('cors');
 const startServer = async ()=>{
-    console.log(typeDefs);
-    console.log(resolvers);
+
     const connect = mongoose.connect(url,{ useNewUrlParser: true, useUnifiedTopology:true });
     connect.then((db) =>{
         console.log('Connected correctly to server!');
@@ -33,6 +29,9 @@ const startServer = async ()=>{
     });
 
     server.applyMiddleware({ app });
+
+    app.use('*', cors());
+
     // listen on port config.port
     app.listen(config.PORT, () => {
         console.log(`The application has started on port using ${config.PORT}`); // eslint-disable-line no-console

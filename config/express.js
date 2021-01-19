@@ -6,9 +6,9 @@ const app = express();
 
 app.use(bodyparser.json());
 
-const base_url = `/graphql-api`;
+const base_url = `/graphql`;
 
-app.use(`${base_url}`,routes);
+app.use(`${base_url}`,bodyparser.json(),routes);
 
 module.exports = {app};
 

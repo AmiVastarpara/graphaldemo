@@ -1,0 +1,5 @@
+npm install express mongoose body-parser cors --save
+
+npm install apollo-server-express --save
+
+pg_ctlcluster 13 main start

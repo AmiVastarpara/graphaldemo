@@ -1,5 +1,3 @@
-npm install express mongoose body-parser cors --save
-
-npm install apollo-server-express --save
+npm i express apollo-server-express bcryptjs jsonwebtoken consola esm cors mongoose yup body-parser dotenv
 
 pg_ctlcluster 13 main start
